@@ -17,8 +17,26 @@
   <input type="button" value="结束" >
   
   <script>
-      // write your code here
-      // ......
+function showTime(){
+        var d = new Date();
+        var year = d.getFullYear();
+        var month = d.getMonth();
+        var dat = d.getDate();
+        var hour = d.getHours();
+        var minutes = d.getMinutes();
+        var seconds = d.getSeconds();
+        document.getElementById("result").innerHTML =
+         year +"年" +(month + 1) +"月"+
+         dat+"日"+hour+"时"+minutes+"分"+seconds+"秒";
+    }
+    var a;
+    function startTime(){
+        a = setInterval("showTime()",1000);
+    }
+
+    function stopTime(){
+        clearInterval(a);
+    }
   </script>
   </body>
   </html>
