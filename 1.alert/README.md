@@ -22,8 +22,13 @@
   </ul>
   
   <script>
-     // write your code here 
-     // ......
+     var itemli = document.getElementsByTagName("li");
+        for(var i = 0;i<itemli.length;i++){
+            itemli[i].index = i;
+            itemli[i].onclick = function(){
+                alert(this.index+1);
+            }
+        }
   </script>
   </body>
   </html>
